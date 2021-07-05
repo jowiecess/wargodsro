@@ -1,0 +1,23 @@
+//~~~~~NPC
+phtownall,185,183,5	script	Freebies	601,{
+if( !#zzBaGONGAEE ){
+set #zzBaGONGAEE,1;
+mes "Welcome to Wargods Ragnarok Online, Here are your starting items!";
+mes "You only get this once for each account!";
+getitembound 12202,300,Bound_Account;
+getitembound 12203,300,Bound_Account;
+getitembound 12204,300,Bound_Account;
+getitembound 12205,300,Bound_Account;
+getitembound 12206,300,Bound_Account;
+getitembound 12207,300,Bound_Account;
+getitembound 14232,100,Bound_Account;
+getitembound 674,30,Bound_Account;
+//getitembound 3695,1,Bound_Account;
+getitembound 12314,1,Bound_Account;
+
+end;
+}else{
+mes "You have claimed the Freebies already.";
+end;
+}
+}

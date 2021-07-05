@@ -1,0 +1,141 @@
+phtownall,191,173,4	script	Breaker Room	725,{
+
+
+
+// What Map will be used
+.Map$ = "job3_arch01";
+// How many Top Breaker will be Recorded
+.TopRank = 3;
+// Message to Inform Players while inside the Room
+setarray .Instruction$[0],
+			"Please listen here carefully...",
+			"This is a emperium breaker test room which is use to test your breaking time.",
+			"Players are required to have a guild when entering the room.",
+			"If you got everything then let's do this Good luck!!";
+.@np$ = "[ Breaker Room ]";
+			
+			
+	while(1) {
+		mes .@np$;
+		mes "This is emperium breaker test room you are able to calculate your emperium breaking speed in this room.";
+		mes "what do you want to do now?";
+		next;
+		switch( select( ( getmapusers( .Map$ ) )?"^FF0000Room is not available":"^0000FFRoom is available^000000",
+				"Top ^FF0000"+.TopRank+"^000000 Breaker Ranking",
+				( getgmlevel() < 90 )?"":"^FF0000[GM]^000000 Reset Room",
+				( getgmlevel() < 90 )?"":"^FF0000[GM]^000000 Reset Ladder" )){
+			case 1:
+				mes .@np$;
+				if( getmapusers( .Map$ ) ){
+				mes "There is another player inside it now.";
+				next;
+				break;
+			}
+				warp .Map$,0,0;
+				killmonster .Map$,"All";
+				donpcevent strnpcinfo(0)+"::OnReady";
+				end;
+			case 2:
+				mes .@np$;
+				mes "Latest record: " + LatestRecord/1000+"."+LatestRecord%1000+" seconds.";
+				for( .@i = 0; .@i < .TopRank; ++.@i ){
+					if( !$TopRankTime[.@i] ) break;
+					mes "Top "+( .@i + 1 )+" - ^0000FF"+$TopName$[.@i]+"^000000";
+					mes "Time taken: ^ED1ADC"+$TopRankTime[.@i]/1000+"."+$TopRankTime[.@i]%1000+"^000000 sec. ";
+				}
+				next;
+				break;
+
+			case 3:
+				mes .@np$;
+				mapannounce .Map$,"Admin resets the emperium ladder room.",bc_all,0xFFFF00;
+				killmonster .Map$,"All";
+				sleep 3000;
+				mapwarp .Map$,"prontera",155,171;
+				mes "Done reset. and player who are inside are warped out.";
+				next;
+				break;
+			case 4:	
+				switch( select( "^0000FFAll Player^000000:^FF0000One Player^000000" ) ){
+					case 1:
+						deletearray $TopRankTime[0],getarraysize( $TopRankTime );
+						deletearray $TopName$[0],getarraysize( $TopName$ );
+						mes "RESETED WHOLE LADDER.";
+						break;
+					case 2:
+						mes "Please input the ^FF0000EXACT NAME^000000 of player you want to delete.";
+						input .Name$;
+						for( .@i = 0; .@i < .TopRank; ++.@i ){
+							if( .Name$ == $TopName$[.@i] ){
+								deletearray $TopName$[.@i],1;
+								deletearray $TopRankTime[.@i],1;
+								mes "Removed ^FF0000"+.Name$+"^000000 from the List.";
+								}
+							}
+						}
+						next;
+						break;
+			}
+		}
+
+OnReady:
+	sleep 3000;
+	for( .@i = 0; .@i < getarraysize( .Instruction$ ); ++.@i ){
+		mapannounce .Map$,.Instruction$[.@i],bc_map,0xFFFF00;
+		sleep 2500;
+	}
+
+	for( .@i = 5; .@i > 0; --.@i ){
+		mapannounce .Map$,"Count Down: " + callfunc("F_InsertPlural",.@i,"second") + "!",bc_map,0xFFFF00;
+		sleep 1000;
+	}
+
+	monster .Map$,29,27,"Breaker Test",1288,1,strnpcinfo(0)+"::OnBreaked";
+	.Record = 0;
+	sleep 500;
+	initnpctimer;
+	end;
+
+OnTimer600000:
+	if( !mobcount( .Map$,strnpcinfo(0)+"::OnBreaked" ) ) end;
+		mapannounce .Map$,"You spent too much time. I think you are AFK , so you are out.",bc_map,0xFFFF00;
+		sleep 3000;
+		mapwarp .Map$,"prontera",155,185;
+		stopnpctimer;
+		end;
+
+OnBreaked:
+	.Time = getnpctimer(0);
+	copyarray .@tempName$[0],$TopName$[0],getarraysize( $TopName$ );
+	copyarray .@tempRecord[0],$TopRankTime[0],getarraysize( $TopRankTime[0] );
+	LatestRecord = .Time;
+	for( .@i = 0; .@i < .TopRank; ++.@i ){
+		if( .Time < $TopRankTime[.@i] || !$TopRankTime[.@i] ){
+				set $TopRankTime[.@i],.Time;
+				set $TopName$[.@i],strcharinfo(0);
+				copyarray $TopRankTime[.@i + 1],.@tempRecord[0],getarraysize( .@tempRecord );
+				copyarray $TopName$[.@i + 1],.@tempName$[0],getarraysize( .@tempName$ );
+			announce strcharinfo(0)+" has achieved the rank " + (.@i + 1) + " in emperium breaking with " + .Time/1000 + "."+.Time%1000+" seconds.",bc_all,0xFFFF00;
+			break;
+			}
+		}
+	stopnpctimer;
+	announce "Current time taken " + .Time/1000 + "." + .Time%1000 + " seconds",bc_self,0xFFFF00;
+	sleep 5000;
+	mapwarp .Map$,"prontera",155,185;
+end;
+
+}
+	
+
+
+	
+job3_arch01	mapflag	nocommand	50
+job3_arch01	mapflag	gvg	on
+job3_arch01	mapflag	gvg_castle
+job3_arch01	mapflag	monster_noteleport
+job3_arch01	mapflag	nosave	SavePoint
+
+// Duplicates
+//============================================================
+//invek,160,153,4	duplicate(Breaker Room)	Breaker Room#1	725

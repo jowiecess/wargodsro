@@ -1,0 +1,5 @@
+-	script	RemoveDancerStatus	-1,{
+OnPCDieEvent:
+	sc_end_class getcharid(0),20;
+end;
+}

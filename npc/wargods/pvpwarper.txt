@@ -1,0 +1,93 @@
+amatsu,123,151,4	script	PvP Warper	404,{
+	setarray .@x[0],181,163,179,172,180,158,172,188,189,160,183,173,161,161,169,162,165,189,189,174,169,185,162,164,167,174,171,169,171;
+	setarray .@y[0],149,161,182,127,119,189,182,159,134,153,145,115,121,133,142,157,169,150,189,188,171,121,163,155,116,124,129,137,154;
+	set .@i, rand(getarraysize(.@x));
+	mes "[ PvP Warper ]";
+	mes "Do you want to enter?";
+ if( select("Room 1 - [ "+getmapusers("guild_vs3")+" / 100 ]:No") == 1 )
+	announce ""+strcharinfo(0)+" has entered PvP Arena",bc_all,0x9E3948;
+  warp "guild_vs3",0,0;
+	close;	
+	//delwaitingroom;
+	//waitingroom "PvP Warper ["+getmapusers("guild_vs3")+"]",0;
+	end;
+}
+guild_vs3	mapflag	nowarp
+guild_vs3	mapflag	nowarpto
+guild_vs3	mapflag	noteleport
+guild_vs3	mapflag	nosave
+guild_vs3	mapflag	nomemo
+guild_vs3	mapflag	nobranch
+guild_vs3	mapflag	pvp
+guild_vs3	mapflag	pvp_noguild
+moc_pryd06	mapflag	nobranch
+lhz_dun03	mapflag	nobranch
+abbey02	mapflag	nobranch
+ayo_dun02	mapflag	nobranch
+lhz_dun04	mapflag	nobranch
+ra_fild02	mapflag	nobranch
+xmas_fild01	mapflag	nobranch
+dic_dun02	mapflag	nobranch
+beach_dun	mapflag	nobranch
+iz_dun05	mapflag	nobranch
+tur_dun04	mapflag	nobranch
+lhz_dun02	mapflag	nobranch
+jupe_core	mapflag	nobranch
+moc_fild22	mapflag	nobranch
+anthell02	mapflag	nobranch
+odin_tem03	mapflag	nobranch
+gon_dun03	mapflag	nobranch
+gef_fild02	mapflag	nobranch
+thana_boss	mapflag	nobranch
+gef_fild10	mapflag	nobranch
+ein_dun02	mapflag	nobranch
+gef_fild14	mapflag	nobranch
+moc_pryd04	mapflag	nobranch
+dew_dun01	mapflag	nobranch
+in_sphinx5	mapflag	nobranch
+niflheim	mapflag	nobranch
+moc_fild17	mapflag	nobranch
+xmas_dun02	mapflag	nobranch
+ice_dun03	mapflag	nobranch
+kh_dun02	mapflag	nobranch
+treasure02	mapflag	nobranch
+moc_prydn2	mapflag	nobranch
+pay_dun04	mapflag	nobranch
+ra_san05	mapflag	nobranch
+mosk_dun03	mapflag	nobranch
+ama_dun03	mapflag	nobranch
+thor_v03	mapflag	nobranch
+gef_dun01	mapflag	nobranch
+mjolnir_04	mapflag	nobranch
+abyss_03	mapflag	nobranch
+dic_dun03	mapflag	nobranch
+prt_sewb4	mapflag	nobranch
+pay_fild11	mapflag	nobranch
+gef_dun02	mapflag	nobranch
+gl_chyard	mapflag	nobranch
+ra_fild03	mapflag	nobranch
+ra_fild04	mapflag	nobranch
+ve_fild01	mapflag	nobranch
+ve_fild02	mapflag	nobranch
+lou_dun03	mapflag	nobranch
+prt_maze03	mapflag	nobranch
+bra_dun02	mapflag	nobranch
+
+
+prontera,163,196,4	duplicate(PvP Warper)	PvP Warper#1	746
+gonryun,166,115,4	duplicate(PvP Warper)	PvP Warper#2	746
+morocc,151,104,5	duplicate(PvP Warper)	PvP Warper#3	746
+geffen,115,65,5	duplicate(PvP Warper)	PvP Warper#4	746
+payon,163,229,4	duplicate(PvP Warper)	PvP Warper#5	746
+alberta,195,142,4	duplicate(PvP Warper)	PvP Warper#6	746
+izlude,121,92,5	duplicate(PvP Warper)	PvP Warper#7	746
+aldebaran,133,120,5	duplicate(PvP Warper)	PvP Warper#8	746
+xmas,152,120,4	duplicate(PvP Warper)	PvP Warper#9	746
+louyang,224,107,4	duplicate(PvP Warper)	PvP Warper#10	746
+dali,70,126,4	duplicate(PvP Warper)	PvP Warper#11	746
+mora,121,183,4	duplicate(PvP Warper)	PvP Warper#12	746
+ra_temsky,52,152,4	duplicate(PvP Warper)	PvP Warper#13	746
+comodo,201,151,4	duplicate(PvP Warper)	PvP Warper#14	746
+yuno,165,179,4	duplicate(PvP Warper)	PvP Warper#15	746
+ayothaya,152,123,4	duplicate(PvP Warper)	PvP Warper#16	746
+phtownall,208,192,4	duplicate(PvP Warper)	PvP Warper#17	746

@@ -1,0 +1,186 @@
+-	script	at_cmd1	-1,{
+OnWarp1:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "turbo_room",115,131;
+	end;
+}
+OnInit:
+	bindatcmd "quest", strnpcinfo(0)+"::OnWarp1";
+	end;
+}
+
+-	script	at_cmd2	-1,{
+OnWarp2:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "turbo_room",100,98;
+
+	end;
+}
+OnInit:
+	bindatcmd "mall", strnpcinfo(0)+"::OnWarp2";
+	end;
+}
+
+
+-	script	at_cmd3	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",200,183;
+
+	end;
+}
+OnInit:
+	bindatcmd "home", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd4	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",343,200;
+
+	end;
+}
+OnInit:
+	bindatcmd "yuno", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd5	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",343,46;
+
+	end;
+}
+OnInit:
+	bindatcmd "izlude", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd6	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",177,38;
+
+	end;
+}
+OnInit:
+	bindatcmd "morroc", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd7	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",331,341;
+
+	end;
+}
+OnInit:
+	bindatcmd "geffen", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd8	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",199,341;
+
+	end;
+}
+OnInit:
+	bindatcmd "payon", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd9	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",70,357;
+
+	end;
+}
+OnInit:
+	bindatcmd "hugel", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd10	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",64,180;
+
+	end;
+}
+OnInit:
+	bindatcmd "aldebaran", strnpcinfo(0)+"::OnWarp3";
+	end;
+}
+
+-	script	at_cmd11	-1,{
+OnWarp3:
+if(getmapflag(strcharinfo(3),mf_pvp) || getmapflag(strcharinfo(3),mf_gvg) || getmapflag(strcharinfo(3),mf_gvg_castle)){
+  message strcharinfo(0),"You can't warp here!";
+end;
+}
+else
+{
+	warp "phtownall",46,64;
+
+	end;
+}
+OnInit:
+	bindatcmd "alberta", strnpcinfo(0)+"::OnWarp3";
+	end;
+}

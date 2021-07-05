@@ -1,2 +1,2 @@
 // Internal default is limited to 128 lines.  If you need more, you will need to modify the MOTD_LINE_SIZE definition in pc.cpp
-Welcome to Showtime Ragnarok Online! 150 max stats, 255/120 Max level! Enjoy! Please report any bugs you find.
+Welcome to Wargods Ragnarok Online! 99 max stats, 99/70 Max level! Use @commands to check your usable commands. Please report any bugs you find.

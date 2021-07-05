@@ -1,0 +1,83 @@
+amatsu,104,151,5	script	Healer	569,{
+percentheal 100,100;    
+skilleffect 34,0; sc_start SC_BLESSING,360000,10;
+skilleffect 29,0; sc_start SC_INCREASEAGI,360000,10;
+skilleffect 45,0; sc_start SC_CONCENTRATE,360000,10;
+specialeffect2 548; // Red for an instant
+repair(1);
+set .@repaired, .@repaired +1;
+sleep2 500;
+
+
+// Repair
+while (getbrokenid(1)) {
+if (Zeny < 1) {
+mes "[ Repairman ]";
+mes "It costs 1 zeny to repair an item.";
+next;
+break;
+}
+
+repair(1);
+set .@repaired, .@repaired +1;
+sleep2 500;
+}
+if (.@repaired) dispbottom .@repaired + " "+( .@repaired==1 ? "item":"items" )+" Repaired.";
+
+// Identify
+if (getskilllv("MC_DISCOUNT")) {
+set .@price, (100 - (5 + getskilllv("MC_DISCOUNT")*2 )) * 2/5;
+} else if (getskilllv("RG_COMPULSION")) {
+set .@price, (100 - (5 + getskilllv("RG_COMPULSION")*4 )) * 2/5;
+} else {
+set .@price, 40;
+}
+getinventorylist;
+for( set .@i,0; .@i < @inventorylist_count; set .@i, .@i +1 ) {
+if (@inventorylist_identify[.@i]) continue;
+if (getskilllv("MC_IDENTIFY") && sp >= 10) { // Merchant's Identify skill
+heal 0,-10;
+} else if (countitem(611)) { // Magnifier
+delitem 611,1;
+} else if (zeny >= .@price) { // deduct cost of 1 Magnifier
+set zeny, zeny - .@price;
+} else {
+mes "[identifier]";
+mes "A Magnifier costs "+.@price+"z.";
+next;
+break;
+}
+delitem2 @inventorylist_id[.@i],@inventorylist_amount[.@i],0,0,0,0,0,0,0;
+getitem @inventorylist_id[.@i],@inventorylist_amount[.@i];
+set .@identified, .@identified +1;
+}
+if (.@identified) dispbottom .@identified + " "+( .@identified==1 ? "item":"items" )+" identified.";
+
+end;
+}
+
+
+geffen,128,63,4	duplicate(Healer)	Healer#1	569
+serene_city,198,229,5	duplicate(Healer)	Healer#2	569
+gonryun,154,115,5	duplicate(Healer)	Healer#3	569
+aldebaran,133,116,5	duplicate(Healer)	Healer#4	569
+louyang,226,103,4	duplicate(Healer)	Healer#5	569
+dali,57,123,5	duplicate(Healer)	Healer#6	569
+lighthalzen,156,102,5	duplicate(Healer)	Healer#7	569
+mora,104,179,5	duplicate(Healer)	Healer#8	569
+ra_temsky,43,152,5	duplicate(Healer)	Healer#9	569
+morocc,151,97,5	duplicate(Healer)	Healer#10	569
+alberta,180,137,5	duplicate(Healer)	Healer#11	569
+xmas,143,120,5	duplicate(Healer)	Healer#12	569
+comodo,197,148,4	duplicate(Healer)	Healer#13	569
+yuno,162,182,4	duplicate(Healer)	Healer#14	569
+ayothaya,147,123,5	duplicate(Healer)	Healer#15	569
+phtownall,202,189,5	duplicate(Healer)	Healer#16	569 //prontera
+phtownall,346,206,5	duplicate(Healer)	Healer#17	569 //yuno
+phtownall,347,51,5	duplicate(Healer)	Healer#18	569 //izlude
+phtownall,180,42,5	duplicate(Healer)	Healer#19	569 //Morroc
+phtownall,49,68,5	duplicate(Healer)	Healer#20	569 //alberta
+phtownall,68,182,5	duplicate(Healer)	Healer#21	569 //aldebaran
+phtownall,72,362,5	duplicate(Healer)	Healer#22	569 //hugel
+phtownall,205,344,5	duplicate(Healer)	Healer#23	569 //payon
+phtownall,335,345,5	duplicate(Healer)	Healer#24	569 //geffen

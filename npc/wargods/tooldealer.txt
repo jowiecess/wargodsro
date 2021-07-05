@@ -1,0 +1,134 @@
+//= All Cards NPC (All-In-One)
+//===== By: ================================================== 
+//= Choiboy with credits to Katazui Or WanMan for the original script
+//===== Current Version: ===================================== 
+//= 1.0
+//===== Compatible With: ===================================== 
+//= eAthena 7.15 +
+//===== Description: ========================================= 
+//= All Cards NPC 
+//===== Additional Comments: ================================= 
+midgard3,183,171,5	shop	Tool Dealer	402,14287:-1,14287:-1,523:-1,12029:30000,12020:30000,12030:30000,12117:35000,12116:35000,12115:35000,12114:35000,12202:5000000,12203:5000000,12204:5000000,12205:5000000,12206:5000000,12207:5000000,14538:7000000,12267:5000000,14541:3000000,14543:3000000,12414:3000000,14536:3000000,12354:3000000,12404:3000000,12418:3000000,14525:5000000,683:2000000,682:3000000,606:800000,684:800000
+
+
+//morocc,164,100,4	duplicate(Tool Dealer)	Tool Dealer#1	900
+//geffen,111,63,5	duplicate(Tool Dealer)	Tool Dealer#2	900
+//payon,148,232,5	duplicate(Tool Dealer)	Tool Dealer#3	900
+//alberta,41,248,5	duplicate(Tool Dealer)	Tool Dealer#4	900
+//aldebaran,135,118,5	duplicate(Tool Dealer)	Tool Dealer#5	900
+//gonryun,154,118,5	duplicate(Tool Dealer)	Tool Dealer#6	900
+//louyang,223,64,4	duplicate(Tool Dealer)	Tool Dealer#7	900
+//jawaii,197,293,5	duplicate(Tool Dealer)	Tool Dealer#8	900
+//ayothaya,154,120,4	duplicate(Tool Dealer)	Tool Dealer#9	900
+//hugel,103,154,4	duplicate(Tool Dealer)	Tool Dealer#10	900
+//que_job03,127,100,4	duplicate(Tool Dealer)	Tool Dealer#11	900
+//izlude,136,115,4	duplicate(Tool Dealer)	Tool Dealer#12	900
+//xmas,154,127,4	duplicate(Tool Dealer)	Tool Dealer#13	900
+//comodo,193,159,4	duplicate(Tool Dealer)	Tool Dealer#14	900
+//yuno,149,179,5	duplicate(Tool Dealer)	Tool Dealer#15	900
+//amatsu,239,250,5	duplicate(Tool Dealer)	Tool Dealer#16	900
+//umbala,126,136,4	duplicate(Tool Dealer)	Tool Dealer#17	900
+//einbroch,72,203,4	duplicate(Tool Dealer)	Tool Dealer#18	900
+//lighthalzen,164,96,4	duplicate(Tool Dealer)	Tool Dealer#19	900
+//einbech,106,206,4	duplicate(Tool Dealer)	Tool Dealer#20	900
+//hugel,101,145,4	duplicate(Tool Dealer)	Tool Dealer#21	900
+//rachel,105,133,5	duplicate(Tool Dealer)	Tool Dealer#22	900
+//prontera,136,171,5	duplicate(Tool Dealer)	Sacred Tool Dealer#23	531
+
+
+//= All Cards NPC (All-In-One)
+//===== By: ================================================== 
+//= Choiboy with credits to Katazui Or WanMan for the original script
+//===== Current Version: ===================================== 
+//= 1.0
+//===== Compatible With: ===================================== 
+//= eAthena 7.15 +
+//===== Description: ========================================= 
+//= All Cards NPC 
+//===== Additional Comments: ================================= 
+//-	shop	B Cards	-1,12029:30000,12020:30000,12030:30000,12117:35000,12116:35000,12115:35000,12114:35000,12202:5000000,12203:5000000,12204:5000000,12205:5000000,12206:5000000,12207:5000000,14538:7000000,12267:5000000,14541:3000000,14543:3000000,12414:3000000,14536:3000000,12354:3000000,12404:3000000,12418:3000000,14525:5000000,683:2000000,682:3000000,606:800000,684:800000
+
+//midgard3,179,173,5	shop	Sell Here	410,501:-1
+-	shop	Branch	-1,604:25000,12109:50000,12103:3500000
+-	shop	A Cards	-1,12123:-1,14526:-1,12122:-1,606:-1,523:-1,12020:-1,715:-1,716:-1,717:-1,14287:-1,14288:-1,547:-1,526:-1,522:-1,608:-1,11504:-1,11503:-1,601:-1,602:-1,1025:1000,1065:-1,678:25000,7135:5000,7136:5000,12030:-1,12029:-1,12033:-1,12028:-1,7139:500000,14509:-1,14510:-1,14511:-1,14536:-1,12247:-1,12016:-1 //useables
+//-	shop	B Cards	-1,12202:5000000,12203:5000000,12204:5000000,12205:5000000,12206:5000000,12207:5000000
+-	shop	D Cards	-1,985:100000,984:100000,613:1000,614:3000,615:5000,1005:-1,612:150,990:-1,991:-1,992:-1,993:-1,1003:-1,1002:-1,998:-1,999:-1,1001:-1 //smith
+-	shop	E Cards	-1,12114:250000,12115:250000,12116:250000,12117:250000,12121:50000,12119:50000,12120:50000,12118:50000 //converter
+-	shop	F Cards	-1,7434:100000,7133:200000,7144:100000,7127:100000,7128:100000,7129:100000,7130:100000,7131:100000,7132:100000,7134:10,1092:5,1044:250,905:50,952:90,1061:500,911:150,716:800,717:800,950:250,7126:850,1012:250,1057:140,921:35,7033:115,929:370,1063:700,1051:450,1050:220,1032:200,972:400,971:400,13761:20,547:30000,7138:200,7137:200,7142:10,7135:15000,7136:15000
+-	shop	G Cards	-1,939:100000,937:100000,952:85,1771:50,7033:115,657:3000,972:350,13761:20
+-	shop	H Cards	-1,1766:40,1755:3,1750:1,1754:3,1761:10,1752:3,1760:10,1759:10,1772:3,1757:3,1770:2,1769:10,1765:30,1763:10,1762:3,1767:3,1764:20,1751:3,1768:10,1753:30,1756:3,1758:10,1771:50,13200:1,13201:15,13202:30,13206:80,13203:80,13207:80,13204:80,13205:80,13252:20,13254:100,13251:10,13253:1000,13250:5,13256:10,13259:10,13258:10,13255:10,13257:10,6512:100,6513:100,6514:100,6515:100,7521:-1,7522:-1,7523:-1,7524:-1
+-	shop	Fishing	-1,2764:-1,2775:-1,2550:-1,2443:-1
+//-	shop	I Cards	-1,531:20,532:20,533:250,534:20,537:1000,711:15,620:1500,619:1000,621:20,622:2500,623:4000,624:2500,625:100,626:1500,626:7000,628:10000,629:300,630:10,631:20,632:5000,633:20,634:20,635:300,636:100,637:350,638:12000,639:18000,640:3000,641:3000,642:2000,643:3000,507:5000,509:5000,508:5000,510:5000,511:5000,518:500,7821:20,7822:20,7823:20,7824:20,6097:20,6094:50000
+
+
+amatsu,99,144,5	script	Tool Dealer	402,{
+set @name$, "[ Tool Dealer ]";
+mes @name$;
+mes "Please select a category";
+next;
+switch(select("Supplies:Smith Tools:Elemental Converters:Ammunition Tools")) {
+
+ 
+case 1:
+close2;
+callshop "A Cards",1;
+end;
+ 
+case 2:
+close2;
+callshop "D Cards",1;
+end;
+ 
+case 3:
+close2;
+callshop "E Cards",1;
+end;
+ 
+ 
+case 4:
+close2;
+callshop "H Cards",1;
+end;
+
+
+}
+ 
+}
+
+morocc,164,100,4	duplicate(Tool Dealer)	Tool Dealer#1	900
+geffen,111,63,5	duplicate(Tool Dealer)	Tool Dealer#2	900
+payon,148,232,5	duplicate(Tool Dealer)	Tool Dealer#3	900
+alberta,180,140,5	duplicate(Tool Dealer)	Tool Dealer#4	900
+aldebaran,135,122,5	duplicate(Tool Dealer)	Tool Dealer#5	900
+gonryun,154,118,5	duplicate(Tool Dealer)	Tool Dealer#6	900
+louyang,226,99,4	duplicate(Tool Dealer)	Tool Dealer#7	900
+jawaii,197,293,5	duplicate(Tool Dealer)	Tool Dealer#8	900
+ayothaya,154,120,4	duplicate(Tool Dealer)	Tool Dealer#9	900
+hugel,103,154,4	duplicate(Tool Dealer)	Tool Dealer#10	900
+que_job03,127,100,4	duplicate(Tool Dealer)	Tool Dealer#11	900
+izlude,124,88,5	duplicate(Tool Dealer)	Tool Dealer#12	900
+xmas,154,127,4	duplicate(Tool Dealer)	Tool Dealer#13	900
+comodo,194,155,4	duplicate(Tool Dealer)	Tool Dealer#14	900
+yuno,149,179,5	duplicate(Tool Dealer)	Tool Dealer#15	900
+amatsu,239,250,5	duplicate(Tool Dealer)	Tool Dealer#16	900
+umbala,126,136,4	duplicate(Tool Dealer)	Tool Dealer#17	900
+einbroch,72,203,4	duplicate(Tool Dealer)	Tool Dealer#18	900
+lighthalzen,164,96,4	duplicate(Tool Dealer)	Tool Dealer#19	900
+einbech,106,206,4	duplicate(Tool Dealer)	Tool Dealer#20	900
+hugel,101,145,4	duplicate(Tool Dealer)	Tool Dealer#21	900
+rachel,105,133,5	duplicate(Tool Dealer)	Tool Dealer#22	900
+prontera,136,171,5	duplicate(Tool Dealer)	Tool Dealer#23	531
+lhz_in03,263,266,5	duplicate(Tool Dealer)	Tool Dealer#24	531
+1@def03,74,104,5	duplicate(Tool Dealer)	Tool Dealer#25	531
+dali,54,120,5	duplicate(Tool Dealer)	Tool Dealer#26	531
+mora,104,174,5	duplicate(Tool Dealer)	Tool Dealer#27	531
+ra_temsky,46,152,5	duplicate(Tool Dealer)	Tool Dealer#28	531
+phtownall,331,346,5	duplicate(Tool Dealer)	Tool Dealer#29	531 //geffen
+phtownall,337,200,5	duplicate(Tool Dealer)	Tool Dealer#30	531 //yuno
+phtownall,344,55,5	duplicate(Tool Dealer)	Tool Dealer#31	531 //izlude
+phtownall,177,45,5	duplicate(Tool Dealer)	Tool Dealer#32	531 //Morroc
+phtownall,198,192,5	duplicate(Tool Dealer)	Tool Dealer#33	531 //prontera
+phtownall,199,347,5	duplicate(Tool Dealer)	Tool Dealer#34	531 //payon
+phtownall,64,184,5	duplicate(Tool Dealer)	Tool Dealer#35	531 //aldebaran
+phtownall,46,71,5	duplicate(Tool Dealer)	Tool Dealer#36	531 //alberta
+phtownall,75,359,5	duplicate(Tool Dealer)	Tool Dealer#37	531 //hugel

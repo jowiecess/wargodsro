@@ -1,0 +1,18 @@
+-	script	Sample	-1,{
+	OnNPCKillEvent:
+		if ( getmonsterinfo( killedrid, 22 ) ) {
+			for ( .@i = 0; .@i < getarraysize( .items ); .@i += 3 ) {
+				if ( rand( 100 ) < .items[ .@i +  2 ] ) {
+					getitem .items[ .@i ], .items[ .@i + 1 ];
+					announce "[ System ] : Congratulations! " +strcharinfo( 0 )+ " has obtained " +getitemname( .items[ .@i ] )+ " [" +.items[ .@i + 1 ]+ "] from " +getmonsterinfo(killedrid, 0)+ ".",0,0xFF3399;
+				}
+			}
+		}
+	end;
+	
+	OnInit:
+		// <item id>,<amount>,<chance>
+		setarray .items[0],6465, 1, 10;
+				   //6465, 3, 5;
+		end;
+}

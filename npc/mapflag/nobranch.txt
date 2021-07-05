@@ -106,6 +106,7 @@ ve_in	mapflag	nobranch
 ve_in02	mapflag	nobranch
 thor_camp	mapflag	nobranch
 cave	mapflag	nobranch
+phtownall	mapflag	nobranch
 
 // Job Quests ==================
 job_sword1	mapflag	nobranch

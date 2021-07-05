@@ -1,8 +1,8 @@
 userid: rouser
 passwd: ropass
 
-char_ip: 51.79.173.142
+char_ip: 51.79.243.227
 char_port: 6121
 
-map_ip: 51.79.173.142
+map_ip: 51.79.243.227
 map_port: 5121

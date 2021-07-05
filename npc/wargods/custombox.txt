@@ -1,0 +1,33 @@
+function	script	CompeBox	{
+		if (checkweight(2289,1,15015,1,2149,1,2561,1,2459,1,20509,1,19539,1,19541,1,5495,1,13710,1,14532,10,12135,3000,35056,1,32298,1,32299,1) == 0) {
+		mes "- Wait a minute !! -";
+		mes "- Currently you're carrying -";
+		mes "- too many items with you. -";
+		mes "- Please try again -";
+		mes "- after you lose some weight. -";
+		getitem 32167,1;
+		close;
+		}
+				
+      if (#solo_claimv4 == 0) {
+	getitembound 14232,150,Bound_Account;
+	getitembound 12103,30,Bound_Account;
+	getitembound 12905,1,Bound_Account;
+	getitembound 12903,1,Bound_Account;
+	getitembound 12906,1,Bound_Account;
+	getitembound 12907,1,Bound_Account;
+	getitembound 12908,1,Bound_Account;
+	getitembound 13607,1,Bound_Account;
+	getitembound 13599,1,Bound_Account;
+	getitembound 12622,1,Bound_Account;
+	getitembound 32296,1,Bound_Account;
+	getitembound 35056,1,Bound_Account;
+	getitembound 32298,1,Bound_Account;
+	getitembound 32299,1,Bound_Account;
+		set #solo_claimv4,1;
+		end;
+	} else {
+	dispbottom "You already claimed your solo pack.";
+ 	end;
+	}
+}

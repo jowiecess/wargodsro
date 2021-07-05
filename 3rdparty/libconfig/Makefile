@@ -36,4 +36,4 @@ libconfig: obj $(LIBCONFIG_DIR_OBJ) $(LIBCONFIG_AR)
 
 $(LIBCONFIG_AR): $(LIBCONFIG_DIR_OBJ)
 	@echo "	AR	$@"
-	@/opt/rh/devtoolset-7/root/usr/bin/ar rcs obj/libconfig.a $(LIBCONFIG_DIR_OBJ)
+	@/bin/ar rcs obj/libconfig.a $(LIBCONFIG_DIR_OBJ)

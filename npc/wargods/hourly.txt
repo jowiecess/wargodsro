@@ -1,0 +1,132 @@
+-	script	cashpoints	-1,{
+ 
+OnInit:
+    announce "The system have been reloaded, please relog again to get more points.", bc_all;
+ 
+    .point_name$ = "Hourly Points";
+    .point_amt = 1;    // Normal points gained.
+    .dlimit = 600;    // Stop points if afk greater then in seconds. 600s = 10 minutes
+    .enable = 1;
+    .level = 0;
+    .online_time = 900; // One hour = 3600 seconds
+ 
+    bindatcmd "checkhour", "cashpoints::OnAtcommand", 0, 100;
+    end;
+ 
+OnPCLoginEvent:
+    if (BaseLevel >= .level)
+    {
+        #idle = 0;
+        @backup_time = 0;
+ 
+        if (!#acctick || #acctick > .online_time)
+            #acctick = gettimetick(2) + .online_time;
+        else
+            #acctick += gettimetick(2);
+ 
+        while(.enable)
+        {
+            @idle_time = checkidle();
+ 
+            if (checkvending() >= 1)
+            {
+                #acctick += @idle_time; // Add idle time
+                #idle = 1;
+                dispbottom "The hourly points event haulted because you were vending.";
+                dispbottom "Please relog again.";
+            }
+            else
+            {
+                sleep2 1000;
+ 
+                @backup_time = .@time_left = #acctick - gettimetick(2);
+ 
+                if (.@time_left <= 0)
+                {
+                    //#DAILYPOINTS += .point_amt;
+					getitem 7773,10;
+					//getitem 7179,10;
+                    #acctick = gettimetick(2) + .online_time;
+                    //dispbottom "Gained " + .point_amt + " " + .point_name$ + ". Total " + #DAILYPOINTS + " Points.";
+					dispbottom "You've gain 10x Tambay Badge for staying 15 minutes in game";
+                }
+                else
+                {
+                    .@time_left = .online_time - .@time_left;
+                    .@Time$ = "";
+                    .@Minutes = .@time_left / 60;
+                    .@time_left -= (.@Minutes * 60);
+ 
+                    if (.@Minutes > 1)
+                        .@Time$ += .@Minutes + " minutes, ";
+                    else if (.@Minutes > 0)
+                        .@Time$ += .@Minutes + " minute, ";
+ 
+                    if (.@time_left > 1 || .@time_left == 0)
+                        .@Time$ += .@time_left + " seconds";
+                    else if (.@time_left == 1)
+                        .@Time$ += .@time_left + " second";
+ 
+                    if (.@Minutes == 62 && .@time_left == 0 || .@Minutes == 63 && .@time_left == 0 || .@Minutes == 64 && .@time_left == 0)
+                        dispbottom "You spend a total of [ " + .@Time$ + " ] playing.";
+                }
+            }
+ 
+            if (#idle)
+                break;
+        }
+    }
+    end;
+ 
+OnPCLogoutEvent:
+    // BackUP online time
+    if (BaseLevel >= .level)
+    {
+        if (@backup_time)
+            #acctick = @backup_time;
+    }
+    end;
+ 
+OnAtcommand:
+    if (BaseLevel >= .level)
+    {
+        if (#idle)
+        {
+            .@Time$ = "";
+            .@Minutes = @idle_time / 60;
+            .@time_left = @idle_time - (.@Minutes * 60);
+ 
+            if (.@Minutes > 1)
+                .@Time$ += .@Minutes + " minutes, ";
+            else if (.@Minutes > 0)
+                .@Time$ += .@Minutes + " minute, ";
+ 
+            if (.@time_left > 1 || .@time_left == 0)
+                .@Time$ += .@time_left + " seconds";
+            else if (.@time_left == 1)
+                .@Time$ += .@time_left + " second";
+ 
+            dispbottom "You been idle for " + .@Time$ + ". Please relog again.";
+        }
+        else
+        {
+            .@time_left = @backup_time;
+            .@Time$ = "";
+            .@Minutes = .@time_left / 60;
+            .@time_left -= (.@Minutes * 60);
+ 
+            if (.@Minutes > 1)
+                .@Time$ += .@Minutes + " minutes, ";
+            else if (.@Minutes > 0)
+                .@Time$ += .@Minutes + " minute, ";
+ 
+            if (.@time_left > 1 || .@time_left == 0)
+                .@Time$ += .@time_left + " seconds";
+            else if (.@time_left == 1)
+                .@Time$ += .@time_left + " second";
+ 
+            dispbottom "You have [ " + .@Time$ + " ] left in able to gain a Tambay Badge.";
+        }
+    }
+    end;
+}

@@ -238,7 +238,7 @@ arrow_decrement: 0
 
 // The rate the common items are dropped (Items that are in the ETC tab, besides card)
 item_rate_common: 5000
-item_rate_common_boss: 10000
+item_rate_common_boss: 100000
 item_rate_common_mvp: 10000
 item_drop_common_min: 1
 item_drop_common_max: 10000
@@ -265,7 +265,7 @@ item_drop_equip_min: 1
 item_drop_equip_max: 10000
 
 // The rate at which cards are dropped
-item_rate_card: 100000
+item_rate_card: 10000
 item_rate_card_boss: 30000
 item_rate_card_mvp: 100
 item_drop_card_min: 10

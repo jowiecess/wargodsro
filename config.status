@@ -427,7 +427,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/roservers/rAthena0'
+ac_pwd='/home/centos/wargodsro'
 srcdir='.'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
@@ -600,12 +600,12 @@ S["PCRE_VERSION"]="8.32"
 S["HAVE_PCRE"]="yes"
 S["MYSQL_LIBS"]="-L/usr/lib64/mysql -lmysqlclient -lpthread -lz -lm -ldl -lssl -lcrypto"
 S["MYSQL_CFLAGS"]="-I/usr/include/mysql"
-S["MYSQL_VERSION"]="5.5.60"
+S["MYSQL_VERSION"]="5.5.68"
 S["HAVE_MYSQL"]="yes"
-S["MYSQL_CONFIG_HOME"]="/usr/bin/mysql_config"
+S["MYSQL_CONFIG_HOME"]="/bin/mysql_config"
 S["WITH_PLUGINS"]="no"
 S["SOFLAGS"]=""
-S["AR"]="/opt/rh/devtoolset-7/root/usr/bin/ar"
+S["AR"]="/bin/ar"
 S["ac_ct_CC"]="gcc"
 S["CFLAGS"]="-flto -fuse-linker-plugin -g -O2 -pipe -ffast-math -Wall -Wempty-body -Wno-switch -Wno-missing-field-initializers -Wno-maybe-uninitialized -Wno-clob"\
 "bered -Wshadow"
@@ -614,8 +614,8 @@ S["SET_MAKE"]=""
 S["OMAP"]="map-server"
 S["OCHR"]="char-server"
 S["OLOG"]="login-server"
-S["EGREP"]="/usr/bin/grep -E"
-S["GREP"]="/usr/bin/grep"
+S["EGREP"]="/bin/grep -E"
+S["GREP"]="/bin/grep"
 S["CXXCPP"]="g++ -E"
 S["OBJEXT"]="o"
 S["EXEEXT"]=""

@@ -1,0 +1,173 @@
+amatsu,99,153,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "amatsu",112,149,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of Amatsu";
+
+}
+
+alberta,183,143,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "alberta",187,137,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of Alberta";
+
+}
+
+xmas,141,127,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "xmas",148,118,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of Lutie";
+
+}
+
+ayothaya,145,120,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "ayothaya",149,111,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of Ayothaya";
+
+}
+
+phtownall,197,189,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",200,183,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,341,206,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",343,200,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,340,51,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",343,45,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,173,42,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",177,37,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,42,68,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",46,64,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,59,182,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",64,177,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,66,362,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",70,355,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,194,344,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",200,337,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}
+phtownall,328,345,5	script	Kafra Employee::kaf_main	112,{
+
+	callfunc "F_KafSet";
+	mes "[Kafra Employee]";
+	mes "The Kafra Corporation";
+	mes "is always working to provide";
+	mes "you with convenient services.";
+	mes "How may I be of assistance?";
+	callfunc "F_Kafra",5,0,1,20,600;
+	savepoint "phtownall",332,339,0,0;
+	callfunc "F_KafEnd",0,1,"in the City of phtownall";
+
+}

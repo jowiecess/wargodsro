@@ -28,19 +28,19 @@ prontera,156,185,5	script	Devil Square Guardian#1	406,{
 			mes "It will open at these times:";
 			mes "00:00 , 02:00 , 04:00 , 06:00"; // display your times here
 			mes "08:00 , 10:00 , 12:00 , 14:00";
-			mes "16:00 , 18:00 , 20:00 , 22:00";
+			mes "16:00 , 18:00";
 			close;
 		}
-		if (BaseLevel < 70 || Zeny < 20000) { // requirements
+		if (BaseLevel < 250 || Zeny < 20000000) { // requirements
 			mes "[Devil Square Guardian]";
 			mes "You do not meet the requirements to enter Devil Square.";
 			mes " ";
 			mes "Requirements:";
-			mes " - Base Level 70";
-			mes " - Registration fee 20,000z";
+			mes " - Base Level 255";
+			mes " - Registration fee 20,000,000z";
 			close;
 		}
-		Zeny -= 20000;
+		Zeny -= 20000000;
 		announce strcharinfo(0)+" has entered Devil Square.", bc_npc;
 		percentheal 100,100;
 		warp "ordeal_1-1",183,182;
@@ -101,8 +101,7 @@ OnClock1200:
 OnClock1400:
 OnClock1600:
 OnClock1800:
-OnClock2000:
-OnClock2200:
+
 	.start = 1;
 	disablenpc "ord11-12"; //from npc/warps/pvp.txt
 	disablenpc "Devil Square Guardian#2";

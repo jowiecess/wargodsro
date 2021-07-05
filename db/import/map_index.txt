@@ -46,4 +46,4 @@ pa2_in01
 pa2_in02
 grandarena
 novice
-firstcity
+phtownall
